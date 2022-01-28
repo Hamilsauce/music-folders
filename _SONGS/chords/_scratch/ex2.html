@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="readXML.css" type="text/css">
+  <title> Read the whole list </title>
+
+
+  <xml ID="writersXML">
+  <writers>
+    <EnglishLanguage>
+      <fiction>
+        <pen>
+          <name>Jane Austin</name>
+          <name>Rex Stout</name>
+          <name>Dashiell Hammett</name>
+        </pen>
+      </fiction>
+    </EnglishLanguage>
+  </writers>
+  
+  </xml>
+  <script language="JavaScript">
+    function findWriters() {
+      var myXML, myNodes;
+      var display = "";
+      myXML = document.all("writersXML");
+      //Put the <name> element into an object.       
+      console.log('myXML', myXML)
+      myNodes = myXML.getElementsByTagName("name");
+      //Extract the different values using a loop.        
+      console.log('myNodes', myNodes)
+      for (var counter = 0; counter < myNodes.length; counter++) {
+        display += myNodes.item(counter).firstChild.nodeValue + "\n";
+      }
+      document.show.me.value = display;
+    }
+  </script>
+</head>
+
+<body>
+  <span ID="blueBack"> Read All Data </span>
+  <div>
+    <form name="show">
+      <textarea name="me" cols=30 rows=5></textarea>
+      <p>
+        <input type="button" value="Show all" onClick="findWriters()">
+    </form>
+  </div>
+</body>
+
+</html>

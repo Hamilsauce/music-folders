@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Important message</h1>
+  <div>
+    <b>To:</b><span id="to"></span><br>
+    <b>from:</b><span id="from"></span><br>
+    <b>Message:</b><span id="message"></span>
+  </div>
+  <script>
+    txt = `
+      <note>
+        <to>My Mother</to>
+        <from>Selena</from>
+        <body>Do not forget to meet on this weekend!</body>
+      </note>
+    `;
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(txt, "application/xml");
+
+    console.log('xmlDoc', xmlDoc.documentElement)
+    // console.log('/new ActiveXObject("Microsoft.XMLDOM");', new ActiveXObject("Microsoft.XMLDOM"))
+    document.getElementById("to").innerHTML = xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+    document.getElementById("from").innerHTML = xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+    document.getElementById("message").innerHTML = xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+  </script>
+</body>
+
+</html>

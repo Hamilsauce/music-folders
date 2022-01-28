@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<chords>
+  <chord first-fret="1" name="E7sus2" strings="6">
+    <string fret="2" number="0" />
+    <string fret="3" number="1" />
+    <string fret="-1" number="2" />
+    <string fret="2" number="3" />
+    <string fret="2" number="4" />
+    <string fret="0" number="5" />
+  </chord>
+  <chord first-fret="1" name="Bm6add11" strings="6">
+    <string fret="0" number="0" />
+    <string fret="3" number="1" />
+    <string fret="1" number="2" />
+    <string fret="4" number="3" />
+    <string fret="2" number="4" />
+    <string fret="-1" number="5" />
+  </chord>
+  <chord first-fret="1" name="Bm" strings="6">
+    <string fret="2" number="0" />
+    <string fret="3" number="1" />
+    <string fret="4" number="2" />
+    <string fret="-1" number="3" />
+    <string fret="-1" number="4" />
+    <string fret="-1" number="5" />
+  </chord>
+</chords>
